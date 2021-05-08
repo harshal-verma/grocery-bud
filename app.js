@@ -14,15 +14,21 @@ function addItem(item){
 }
 
 function deleteItem(itemId){
+    // console.log(itemId);
     const newItems = items.filter(function(item){
         return item.id !== itemId;
     })
+    
     items = newItems;
     // renderList();
 }
 
-function checkItem(){
+function checkItem(itemId){
+    const checkIndex = items.findIndex(function(item){
+        return item.id === itemId;
+    })
 
+    items[checkIndex].done = !items[checkIndex].done;
 }
 
 function renderList(){
@@ -42,8 +48,7 @@ function renderList(){
 
 function clickHandler(event){
     if(event.target.className === 'btn'){
-        console.log(event.target.dataset.itemid)
-        const itemToBeDeleted = event.target.dataset.itemid;
+        const itemToBeDeleted =  Number(event.target.dataset.itemid);
         deleteItem(itemToBeDeleted);
     }
 }
