@@ -1,0 +1,41 @@
+.grocery-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.grocery-header{
+    font-size: 4rem;
+    margin: 2rem 0;
+}
+
+.grocery-input{
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+}
+
+.grocery-list{
+    /* border: 1px black solid; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0rem 0.5rem;
+
+}
+
+.grocery-list li{
+    list-style-type: none;
+    margin: 0.25rem 0.5rem;
+}
+
+.btn{
+    
+}
+
+
+
